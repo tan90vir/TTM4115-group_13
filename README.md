@@ -5,6 +5,5 @@ RAT implementation instructions.
 3) The script will download a .csv with RAT's answers.
 Notes:
 - The csv file will be named after the RAT number
-- The RAT number will be computed on rat_links.txt rows.
-- The first row of form-links.txt is intended to host the title of the file.
+- The RAT name will be the parmater passed to rat_downloader.sh (es: "RAT1")
 - RAT-1.csv gives you an example of the expected result.
