@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+
+{% block title %}
+  RAT Website - List of all Students
+{% endblock %}
+
+{% block content %}
+<H1>
+Project Name is {{ projectname }}
+    </H1>
+<br/>
+<h2>
+Project Id is {{ id }}
+    </h2>
+<br>
+
+<div class="mycard">
+    <h1>Weekdays</h1>
+    <ul>
+    {% for x in day%}
+        <li>{{x}}</li>
+    {% endfor %}
+</ul>
+</div>
+
+<br>
+
+{% endblock %}

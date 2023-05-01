@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% load static %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <script type="text/javascript"
+    src="https://static.codehs.com/gulp/80550f5fc4071985bfef352d04f005ca3de931d3/chs-js-lib/chs.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/jquery.countdown.css">
+</head>
+
+<body>
+  <div class="container">
+    <ul class="nav bg-danger">
+      <li class="nav-item">
+        <a class="nav-link link-light" href="/">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="/statistics">STATISTICS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="/jaya">TIMER</a>
+      </li>
+      <div class="dropdown">
+        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          RATS
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="/RATS">RAT 1</a></li>
+          <li><a class="dropdown-item" href="/RAT2">RAT 2</a></li>
+          <li><a class="dropdown-item" href="/RAT3">RAT 3</a></li>
+        </ul>
+      </div>
+    </ul>
+
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>
