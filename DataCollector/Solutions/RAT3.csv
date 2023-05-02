@@ -1,0 +1,2 @@
+1.  What does the IP address expression 173.16.4.0/22 represent? ,2.  Which statement about Network Address Translation (NAT) is correct ? ,3.  IPv4 and IPv6 addressing is different. How?
+A whole subnetwork with 1024 IPv4 addresses,NAT enables interoperability between different IP addressing regimes.,Address planning is different since the amounts of available addresses are very different.
