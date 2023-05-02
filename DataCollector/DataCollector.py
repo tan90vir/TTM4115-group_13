@@ -44,9 +44,9 @@ if RAT_name in RAT_list:
 else:
     sys.exit(f"***ERROR***: the RAT file is not correct.")
 
-RATs_dir_path = os.path.abspath('RATs') # directory with RATs results from students
-RATSol_dir_path = os.path.abspath('Solutions') # directory with RATs correct answers
-StatJSON = os.path.abspath('StatJSON') # directory with statistics from RATs     
+RATs_dir_path = os.path.abspath(sys.path[0]+'/RATs') # directory with RATs results from students
+RATSol_dir_path = os.path.abspath(sys.path[0]+'/Solutions') # directory with RATs correct answers
+StatJSON = os.path.abspath(sys.path[0]+'/StatJSON') # directory with statistics from RATs     
 
 # Find all files under the two directories 
 filenames_RATs = os.listdir(RATs_dir_path)
@@ -110,7 +110,7 @@ for email in email_list:
 partecipants=(len(RAT_answers))
 
 vals=list(RAT_answers.values())
-mean_grade=(np.sum(vals)/partecipants)/len(vals[0])*100
+mean_grade=round((np.sum(vals)/partecipants)/len(vals[0])*100, 2)
 
 # Compute score average
 mVals=np.mean(vals, axis=0)
@@ -139,7 +139,7 @@ out_file.close()
 databaseURL = 'https://ttm4115-webpage-default-rtdb.europe-west1.firebasedatabase.app/'
 
 # Check private key to access the Firebase database
-cred_obj = firebase_admin.credentials.Certificate('PrivateKey/ttm4115_firebase.json')
+cred_obj = firebase_admin.credentials.Certificate(sys.path[0]+'/PrivateKey/ttm4115_firebase.json')
 default_app = firebase_admin.initialize_app(cred_obj, {'databaseURL':databaseURL})
 
 # Get a database reference to the name of the RAT in the database
