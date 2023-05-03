@@ -1,0 +1,10 @@
+{
+    "apiKey": "API_KEY",
+    "authDomain": "ttm4115-webpage.firebaseapp.com",
+    "projectId": "ttm4115-webpage",
+    "storageBucket": "ttm4115-webpage.appspot.com",
+    "messagingSenderId": "MANY_DIGITS",
+    "appId": "1:212572809356:web:482bdbce8e8e16d1b973a9",
+    "measurementId": "G-XC0DTG2Q5M",
+    "databaseURL": "https://ttm4115-webpage-default-rtdb.europe-west1.firebasedatabase.app/"
+}
