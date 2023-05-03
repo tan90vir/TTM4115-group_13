@@ -37,7 +37,11 @@ def statistics(request):
     Time1 = database.child('RAT1').child('AvgTime').get().val()
     Time2 = database.child('RAT2').child('AvgTime').get().val()
     Time3 = database.child('RAT3').child('AvgTime').get().val()
-
+    
+    Time1 = round(Time1/60)
+    Time2 = round(Time2/60)
+    Time3 = round(Time3/60)
+    
     return render(request, "statistics.html",{"AvgScore1":AvgScore1,"RAT1":Rat1,"CorrAnsPerQ1":CorrAnsPerQ1, "Participants1":Participants1, "Time1":Time1,
                                                "AvgScore2":AvgScore2,"RAT2":Rat2,"CorrAnsPerQ2":CorrAnsPerQ2,"Participants2":Participants2, "Time2":Time2,
                                                 "AvgScore3":AvgScore3,"RAT3":Rat3,"CorrAnsPerQ3":CorrAnsPerQ3, "Participants3":Participants3, "Time3":Time3})
