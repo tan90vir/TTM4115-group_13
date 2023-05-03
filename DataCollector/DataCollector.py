@@ -4,7 +4,7 @@ Project: DataCollector
 How to run the code: python3 DataCollector.py <RAT_name> <startTime>
 where
 - <RAT_name> can be RAT1, RAT2, etc...
-- <startTime> is the starting time of the RAT session (format: yyyy/mm/dd-HH:MM:SS)
+- <startTime> is the starting time of the RAT session (format: dd/mm/yyyy-HH:MM:SS)
 
 In case you want to add more RAT files, remember to update RAT_list!
 
