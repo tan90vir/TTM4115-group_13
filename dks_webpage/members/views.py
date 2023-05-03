@@ -58,7 +58,7 @@ def button_pushed(request):
   time = now.strftime("%X")
   timestamp = day +"/"+month+"/"+year + "-" + time
   prefix = "RAT1"
-  with open('/Users/rosemari/DKS_Test/dks_webpage/members/RAT1date.txt','r') as f:
+  with open('members/RAT1date.txt','r') as f:
     lines = f.readlines()
     f.close()
   index_line = None
@@ -70,7 +70,7 @@ def button_pushed(request):
     lines[index_line] = "RAT1 "+ timestamp + os.linesep
   else:
     lines.append("RAT1 "+ timestamp + os.linesep)
-  with open('/Users/rosemari/DKS_Test/dks_webpage/members/RAT1date.txt','w') as f:
+  with open('members/RAT1date.txt','w') as f:
     f.writelines(lines)
   return redirect('teachers')
 
@@ -82,7 +82,7 @@ def button_pushed2(request):
   time = now.strftime("%X")
   timestamp = day +"/"+month+"/"+year + "-" + time
   prefix = "RAT2"
-  with open('/Users/rosemari/DKS_Test/dks_webpage/members/RAT1date.txt','r') as f:
+  with open('members/RAT1date.txt','r') as f:
     lines = f.readlines()
     f.close()
   index_line = None
