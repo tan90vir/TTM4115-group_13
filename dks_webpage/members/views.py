@@ -58,7 +58,7 @@ def button_pushed(request):
   time = now.strftime("%X")
   timestamp = day +"/"+month+"/"+year + "-" + time
   prefix = "RAT1"
-  with open('members/RAT1date.txt','r') as f:
+  with open('members/ratTimestamp.txt','r') as f:
     lines = f.readlines()
     f.close()
   index_line = None
@@ -70,7 +70,7 @@ def button_pushed(request):
     lines[index_line] = "RAT1 "+ timestamp + os.linesep
   else:
     lines.append("RAT1 "+ timestamp + os.linesep)
-  with open('members/RAT1date.txt','w') as f:
+  with open('members/ratTimestamp.txt','w') as f:
     f.writelines(lines)
   return redirect('teachers')
 
@@ -82,7 +82,7 @@ def button_pushed2(request):
   time = now.strftime("%X")
   timestamp = day +"/"+month+"/"+year + "-" + time
   prefix = "RAT2"
-  with open('members/RAT1date.txt','r') as f:
+  with open('members/ratTimestamp.txt','r') as f:
     lines = f.readlines()
     f.close()
   index_line = None
@@ -94,7 +94,7 @@ def button_pushed2(request):
     lines[index_line] = "RAT2 "+ timestamp + os.linesep
   else:
     lines.append("RAT2 "+ timestamp + os.linesep)
-  with open('members/RAT1date.txt','w') as f:
+  with open('members/ratTimestamp.txt','w') as f:
     f.writelines(lines)
   return redirect('teachers')
 
@@ -106,7 +106,7 @@ def button_pushed3(request):
   time = now.strftime("%X")
   timestamp = day +"/"+month+"/"+year + "-" + time
   prefix = "RAT3"
-  with open('members/RAT1date.txt','r') as f:
+  with open('members/ratTimestamp.txt','r') as f:
     lines = f.readlines()
     f.close()
   index_line = None
@@ -118,7 +118,7 @@ def button_pushed3(request):
     lines[index_line] = "RAT3 "+ timestamp + os.linesep
   else:
     lines.append("RAT3 "+ timestamp + os.linesep)
-  with open('members/RAT1date.txt','w') as f:
+  with open('members/ratTimestamp.txt','w') as f:
     f.writelines(lines)
   return redirect('teachers')
 
