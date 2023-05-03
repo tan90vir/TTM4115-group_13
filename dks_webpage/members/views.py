@@ -7,16 +7,11 @@ from django.shortcuts import redirect
 import pyrebase
 import datetime
 import os
-config = {
-    "apiKey": "AIzaSyDQu7yTewKm4KPvW-ZDbajKY35gsKqbARE",
-    "authDomain": "ttm4115-webpage.firebaseapp.com",
-    "projectId": "ttm4115-webpage",
-    "storageBucket": "ttm4115-webpage.appspot.com",
-    "messagingSenderId": "212572809356",
-    "appId": "1:212572809356:web:482bdbce8e8e16d1b973a9",
-    "measurementId": "G-XC0DTG2Q5M",
-    "databaseURL": "https://ttm4115-webpage-default-rtdb.europe-west1.firebasedatabase.app/"
-  }
+import json
+import sys
+print(sys.path[0])
+with open(sys.path[0]+'/../../DataCollector/PrivateKey/data.json', 'r') as f:
+    config = json.load(f)
 firebase=pyrebase.initialize_app(config)
 authe = firebase.auth()
 database=firebase.database()
