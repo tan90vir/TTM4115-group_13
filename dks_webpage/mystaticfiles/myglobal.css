@@ -5,6 +5,10 @@ body {
   letter-spacing: 0.64px;
   color: #585d74;
 }
+.background {
+  background-image: url('members/static/img/testBkgr.jpeg');
+  background-repeat: no-repeat;
+}
 .topnav {
   background-color:#375BDC;
   color:#ffffff;

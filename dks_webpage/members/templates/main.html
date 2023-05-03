@@ -1,11 +1,12 @@
 {% extends "master.html" %}
 
 {% block title %}
-  My Tennis Club
+My Tennis Club
 {% endblock %}
 
 {% block content %}
-  <div class="main">
+{% load static %}
+<!-- <div class="main">
     <h1></h1>
 
     <h3>Welcome to this course</h3>
@@ -15,5 +16,29 @@
     <p>
       Wanna start a break timer? 
     </p>
+  </div> -->
+<!-- <div class="jumbotron jumbotron-fluid bg-dark ">
+  <div class=" container">
+    <h1 class="display-4">Welcome to this course</h1>
+    <p class="lead">In the menu above you can nagivate to the course statistics, the break timer and the RAT's.</p>
   </div>
+</div> -->
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title">Welcome to this course</h1>
+    <p class="card-text">In the menu above you can nagivate to the course statistics, the break timer and the RAT's.</p>
+    <img class="card-img-bottom" src="{% static 'img/testBkgr.jpeg' %}" alt="Card image cap">
+  </div>
+</div>
+</div>
+<!-- <div class=" card " style=" width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Welcome to this course</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Nice to see you!</h6>
+      <p class="card-text">In the menu above you can nagivate to the course statistics, the break timer and the RAT's.
+      </p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div> -->
 {% endblock %}

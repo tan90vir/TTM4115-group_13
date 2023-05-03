@@ -1,0 +1,92 @@
+{% extends "master.html" %}
+
+{% block title %}
+Teacher View
+{% endblock %}
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">Teachers View</h1>
+        <p class="card-text">Here you can start the RAT's and make them available for the students.</p>
+    </div>
+    <center>
+        <div class="btn-group btn-group" role="group" aria-label="timerButtons">
+            <span class="border border-dark">
+                <button class="btn btn-light fs-3" id="RAT" onclick="showRAT1()">Activate RAT 1</button>
+            </span>
+            <span class="border border-dark">
+                <button id="stop2" class="btn btn-light fs-3" onclick="showRAT2()">Activate RAT 2</button>
+            </span>
+            <span class="border border-dark">
+                <button class="btn btn-light fs-3" onclick="showRAT3()">Activate RAT 3</button>
+            </span>
+        </div>
+    </center>
+    <p></p>
+    <center>
+        <div class="btn-group btn-group" role="group" aria-label="timerButtons">
+            <span class="border border-dark">
+                <button class="btn btn-light fs-3" id="RAT" onclick="deactivateRAT1()">Deactivate RAT 1</button>
+            </span>
+            <span class="border border-dark">
+                <button id="stop2" class="btn btn-light  fs-3" onclick="deactivateRAT2()">Dectivate RAT 2</button>
+            </span>
+            <span class="border border-dark">
+                <button class="btn btn-light fs-3" onclick="deactivateRAT3()">Dectivate RAT 3</button>
+            </span>
+        </div>
+    </center>
+    <p></p>
+    <center>
+        <form action="{% url 'button_pushed' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Click here for the timestamp of the start of RAT 1</button>
+        </form>
+        <p></p>
+        <form action="{% url 'button_pushed2' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Click here for the timestamp of the start of RAT 2</button>
+        </form>
+        <p></p>
+        <form action="{% url 'button_pushed3' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Click here for the timestamp of the start of RAT 3</button>
+        </form>
+    </center>
+</div>
+</div>
+<script>
+    function getDate() {
+
+        const stamp = new Date();
+        var formatDate = stamp.getFullYear() + "/" +
+            (stamp.getMonth() + 1).toString().padStart(2, '0') + "/" +
+            stamp.getDate().toString().padStart(2, '0') + "-" +
+            stamp.getHours().toString().padStart(2, '0') + ":" +
+            stamp.getMinutes().toString().padStart(2, '0') + ":" +
+            stamp.getSeconds().toString().padStart(2, '0');
+
+        localStorage.setItem("date", formatDate);
+    }
+    function showRAT1() {
+        localStorage.setItem("showRat1", "on");
+        getDate();
+    }
+    function showRAT2() {
+        localStorage.setItem("showRat2", "on");
+    }
+    function showRAT3() {
+        localStorage.setItem("showRat3", "on");
+    }
+    function deactivateRAT1() {
+        localStorage.setItem("showRat1", "off");
+    }
+    function deactivateRAT2() {
+        localStorage.setItem("showRat2", "off");
+    }
+    function deactivateRAT3() {
+        localStorage.setItem("showRat3", "off");
+    }
+
+</script>
+{% endblock %}

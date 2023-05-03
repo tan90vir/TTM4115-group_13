@@ -1,28 +1,223 @@
 {% extends "master.html" %}
 
 {% block title %}
-  RAT Website - List of all Students
+RAT Statistics
 {% endblock %}
 
 {% block content %}
-<H1>
-Project Name is {{ projectname }}
-    </H1>
-<br/>
+<table class="table table-bordered table-light">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">RAT 1</th>
+            <th scope="col">RAT 2</th>
+            <th scope="col">RAT 3</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr>
+            <th scope="row">Average Score Total</th>
+            <td>{{AvgScore1}}</td>
+            <td>{{AvgScore2}}</td>
+            <td>{{AvgScore3}}</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Nubmer of participants</th>
+            <td>{{Participants1}}</td>
+            <td>{{Participants2}}</td>
+            <td>{{Participants3}}</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Time spent on RAT (median)</th>
+            <td>{{Time1}}</td>
+            <td>{{Time2}}</td>
+            <td>{{Time3}}</td>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 1</th>
+            <td>{{CorrAnsPerQ1.0}}</td>
+            <td>{{CorrAnsPerQ2.0}}</td>
+            <td>{{CorrAnsPerQ3.0}}</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Average Score Question 2</th>
+            <td>{{CorrAnsPerQ1.1}}</td>
+            <td>{{CorrAnsPerQ2.1}}</td>
+            <td>{{CorrAnsPerQ3.1}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 3</th>
+            <td>{{CorrAnsPerQ1.2}}</td>
+            <td>{{CorrAnsPerQ2.2}}</td>
+            <td>{{CorrAnsPerQ3.2}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 4</th>
+            <td>{{CorrAnsPerQ1.3}}</td>
+            <td>{{CorrAnsPerQ2.3}}</td>
+            <td>{{CorrAnsPerQ3.3}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 5</th>
+            <td>{{CorrAnsPerQ1.4}}</td>
+            <td>{{CorrAnsPerQ2.4}}</td>
+            <td>{{CorrAnsPerQ3.4}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 6</th>
+            <td>{{CorrAnsPerQ1.5}}</td>
+            <td>{{CorrAnsPerQ2.5}}</td>
+            <td>{{CorrAnsPerQ3.5}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 7</th>
+            <td>{{CorrAnsPerQ1.6}}</td>
+            <td>{{CorrAnsPerQ2.6}}</td>
+            <td>{{CorrAnsPerQ3.6}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 8</th>
+            <td>{{CorrAnsPerQ1.7}}</td>
+            <td>{{CorrAnsPerQ2.7}}</td>
+            <td>{{CorrAnsPerQ3.7}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 9</th>
+            <td>{{CorrAnsPerQ1.8}}</td>
+            <td>{{CorrAnsPerQ2.8}}</td>
+            <td>{{CorrAnsPerQ3.8}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Average Score Question 10</th>
+            <td>{{CorrAnsPerQ1.9}}</td>
+            <td>{{CorrAnsPerQ2.9}}</td>
+            <td>{{CorrAnsPerQ3.9}}</td>
+        </tr>
+    </tbody>
+</table>
+<!-- <div class="card-group">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Statistics for RAT 1</h5>
+            <p class="card-text">The average score for this rat is {{ AvgScore1 }}.</p>
+            <h6 class="card-text">Scores per question:</h6>
+            <p class="card-text">
+            <ul>
+                {% for x in CorrAnsPerQ1%}
+                <li>{{x}}</li>
+                {% endfor %}
+            </ul>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Statistics for RAT 2</h5>
+            <p class="card-text">The average score for this rat is {{ AvgScore2 }}.</p>
+            <h6 class="card-text">Scores per question:</h6>
+            <p class="card-text">
+            <ul>
+                {% for x in CorrAnsPerQ2%}
+                <li>{{x}}</li>
+                {% endfor %}
+            </ul>
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Statistics for RAT 3</h5>
+            <p class="card-text">The average score for this rat is {{ AvgScore3 }}.</p>
+            <h6 class="card-text">Scores per question:</h6>
+            <p class="card-text">
+            <ul>
+                {% for x in CorrAnsPerQ3%}
+                <li>{{x}}</li>
+                {% endfor %}
+            </ul>
+            </p>
+        </div>
+    </div> -->
+<!-- <H1>
+    Statistics for RAT 1
+</H1>
+<br />
 <h2>
-Project Id is {{ id }}
-    </h2>
+
+    The average score for this rat is {{ AvgScore1 }}
+</h2>
 <br>
 
 <div class="mycard">
-    <h1>Weekdays</h1>
+    <h1>Scores per question</h1>
     <ul>
-    {% for x in day%}
+        {% for x in CorrAnsPerQ1%}
         <li>{{x}}</li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+    </ul>
 </div>
 
 <br>
 
+<H1>
+    Statistics for RAT 2
+    <br />
+    <h2>
+
+        The average score for this rat is {{ AvgScore2 }}
+    </h2>
+    <br>
+
+    <div class="mycard">
+        <h1>Scores per question</h1>
+        <ul>
+            {% for x in CorrAnsPerQ2%}
+            <li>{{x}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <br>
+
+    <H1>
+        Statistics for RAT 3
+    </H1>
+    <br />
+    <h2>
+
+        The average score for this rat is {{ AvgScore3 }}
+    </h2>
+    <br>
+
+    <div class="mycard">
+        <h1>Scores per question</h1>
+        <ul>
+            {% for x in CorrAnsPerQ3%}
+            <li>{{x}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <br> -->
 {% endblock %}

@@ -1,12 +1,47 @@
 {% extends "master.html" %}
 
 {% block title %}
-  This weeks RAT:
+This weeks RAT:
 {% endblock %}
 
 {% block content %}
-<h1>RAT 1:</h1>
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScW9bD6fNJ9j7QO74yraVb06bgyvAzcYE0D1RnNRqaTEhSd4Q/viewform?embedded=true" width="640" height="494" frameborder="0" marginheight="0" marginwidth="0">Laster inn …</iframe>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">RAT 1:</h1>
+
+    <!-- <center>
+      <button class="btn-dark fs-3" id="RAT" onclick="showRAT()">Open RAT</button>
+    </center> -->
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeIKfZEaZgFTEbB263t9dRcZPNtvSmwik_1wYjEOf4svtn0mA/viewform?embedded=true"
+      style="visibility:hidden;" width="640" height="1569" frameborder="0" marginheight="0" marginwidth="0"
+      id="RATFrame">Laster inn …</iframe>
+  </div>
+</div>
+
+
+<script>
+
+  var iframe_show = false;
+  /*window.onload = function () {
+    var iframe = document.getElementById('RATFrame');
+    var iframeOpen = false;
+    iframe.style.display = 'none';
+  }*/
+  window.onload = function () {
+    var iframe = document.getElementById('RATFrame');
+    // var startTime = Date.now();
+    // iframe.style.visibility = "visible";
+    if (localStorage.getItem("showRat1") == "on") {
+      iframe.style.visibility = "visible";
+    }
+    else {
+      iframe.style.visibility = "hidden";
+    }
+  }
+
+
+</script>
 {% endblock %}
-

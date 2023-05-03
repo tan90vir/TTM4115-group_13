@@ -7,16 +7,38 @@
   {% load static %}
   {% bootstrap_css %}
   {% bootstrap_javascript %}
-  <script type="text/javascript"
-    src="https://static.codehs.com/gulp/80550f5fc4071985bfef352d04f005ca3de931d3/chs-js-lib/chs.js"></script>
-  <link rel="stylesheet" type="text/css" href="/static/css/jquery.countdown.css">
+  <!-- <link rel="stylesheet" href="static/myglobal.css"> -->
+  <style>
+    body {
+      background-image: url("{% static 'img/test.avif' %}");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    iframe {
+      margin: auto;
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
-    <ul class="nav bg-danger">
+    <ul class="nav bg-dark">
       <li class="nav-item">
         <a class="nav-link link-light" href="/">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link link-light" href="/teachers">TEACHERS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link link-light" href="/statistics">STATISTICS</a>
@@ -25,7 +47,7 @@
         <a class="nav-link link-light" href="/jaya">TIMER</a>
       </li>
       <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
           aria-expanded="false">
           RATS
         </button>

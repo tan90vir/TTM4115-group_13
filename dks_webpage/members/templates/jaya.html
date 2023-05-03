@@ -46,13 +46,18 @@
 </script>
 -->
 <center>
-  <p class="fs-3 text-danger">BREAK TIMER</p>
-  <div style="font-size:38px" id="clockdiv2">00:00</div>
-  <!-- <button class="btn btn-info fs-1" id="timeSet">Set Time</button> -->
-  <button class="btn btn-success fs-1" id="start2">Start</button>
-  <button id="stop2" class="btn btn-warning fs-1">Pause</button>
-  <button class="btn btn-danger fs-1" id="reset">Reset</button>
-
+  <div class="card" style="width: 20rem;">
+    <span class="border border-dark">
+      <p class="fs-2 text-dark">BREAK TIMER</p>
+      <div style="font-size:38px" id="clockdiv2">00:00</div>
+      <!-- <button class="btn btn-info fs-1" id="timeSet">Set Time</button> -->
+      <div class="btn-group btn-group-lg" role="group" aria-label="timerButtons">
+        <button class="btn btn-success fs-3" id="start2">Start</button>
+        <button id="stop2" class="btn btn-warning fs-3">Pause</button>
+        <button class="btn btn-danger fs-3" id="reset">Reset</button>
+      </div>
+    </span>
+  </div>
 </center>
 <script>
 
